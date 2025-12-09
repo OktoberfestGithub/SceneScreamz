@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 25.2.3.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
+		pre { font-size: 10pt; font-family: "Liberation Mono", monospace; background: transparent }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;scenescreamz - Scene Emo Page&lt;/title&gt;
+  
+  &lt;!-- Google Font --&gt;
+  &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Creepster&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+  
+  &lt;style&gt;
+  /* Global */
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Creepster', cursive, sans-serif;
+    overflow-x: hidden;
+    background: #000;
+    height: 100%;
+  }
+
+  /* Background - FLEX container now */
+  .scene-bg {
+    display: flex;
+    justify-content: center; 
+    align-items: stretch;    
+    width: 100%;
+    min-height: 100vh;
+    background: url() center center / cover no-repeat;
+    z-index: 0;
+    position: relative;
+  }
+
+  /* Side Columns */
+  .side-bg {
+    position: fixed;
+    top: 0;
+    width: 20vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: repeat-y;
+    z-index: -1;
+  }
+
+  .left-side {
+    left: 0;
+    background-image: url(https://64.media.tumblr.com/fd9dea9bd9c3d403dff1ac61caca1091/tumblr_orpi2cL3QU1wpzpibo1_400.gifv);
+  }
+
+  .right-side {
+    right: 0;
+    background-image: url(https://64.media.tumblr.com/fd9dea9bd9c3d403dff1ac61caca1091/tumblr_orpi2cL3QU1wpzpibo1_400.gifv);
+    transform: scaleX(-1);
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: linear-gradient(90deg, #00ff72, #00f0ff, #aa00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGradient 5s ease infinite;
+    text-shadow: 0 0 2px #00ff72, 0 0 4px #00f0ff, 0 0 6px #aa00ff;
+  }
+  .gradient-text-link { text-decoration: none; color: inherit; }
+  @keyframes textGradient {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+  }
+
+  /* Center Content */
+  .center-content {
+    width: 90%;
+    max-width: 600px;
+    line-height: 1.5em;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    background: rgba(0,0,0,0.6);
+    border: 2px solid #00ff72;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  :root { --cd-image: url('https://fluorescent-lights.neocities.org/Digital-CD-Disk-Vector-Transparent-PNG.png'); }
+  .profile-pic {
+    position: relative;
+    width: 183px;
+    filter: drop-shadow(0 0 0.25rem gray);
+    margin: 0 auto 20px auto;
+    overflow: visible;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  .profile-pic:after {
+    content: &quot;&quot;;
+    background: url('https://fluorescent-lights.neocities.org/f0rzNHe.png'),
+                linear-gradient(150deg, rgba(255,255,255,0.4), rgba(255,255,255,0.2) 40%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.6));
+    background-size: contain, cover;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+  }
+  .profile-pic:before {
+    content: &quot;&quot;;
+    background: var(--cd-image);
+    position: absolute;
+    top: 5px; left: -20px;
+    width: 150px; height: 150px;
+    background-repeat: no-repeat;
+    z-index: -1;
+    animation: spin 5s linear infinite;
+    transition: left 0.5s ease;
+  }
+  .profile-pic:hover:before { left: -75px; }
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+  .spacehey-box { padding: 0; }
+
+  .top-border {
+    text-align: center;
+    font-weight: bold;
+    font-size:2em;
+    margin: 15px 0 20px 0;
+  }
+
+  .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: float 5s linear infinite;
+    z-index: 2;
+  }
+  @keyframes float {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10px); opacity: 0; }
+  }
+
+  .sticker-emoji {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 8s linear infinite alternate;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .left-box, .right-box {
+    position: absolute;
+    width: 150px;
+    padding: 10px;
+    border: 2px solid #00ff72;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.4em;
+    z-index: 1;
+    background: rgba(0,0,0,0.6);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .discord-bio { text-align: center; margin: 20px 0; }
+  .interests-socials { font-size: 1em; line-height: 1.5em; }
+  .bottom-text { font-size: 1em; line-height: 1.5em; }
+
+  .cd-player-window {
+    width: 320px;
+    max-width: 90%;
+    padding: 10px;
+    background: rgba(0,0,0,0.7);
+    border: 2px solid #00ff72;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    box-shadow: 0 0 10px #00ff72;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  .cd-player-window iframe { border-radius: 5px; width: 100%; height: 80px; }
+  .cd-info {
+    color: #00ff72;
+    margin-top: 5px;
+    font-size: 0.9em;
+  }
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px #00ff72; }
+    50% { box-shadow: 0 0 15px #00f0ff; }
+    100% { box-shadow: 0 0 5px #aa00ff; }
+  }
+
+  @media (max-width: 768px) {
+    .left-box, .right-box { display: none; }
+    .profile-pic { width: 140px; }
+    .center-content { width: 95%; margin: 30px auto; }
+    .star { width: 2px !important; height: 2px !important; }
+    .sticker-emoji { font-size: 1.5rem; }
+  }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class=&quot;scene-bg&quot;&gt;
+
+    &lt;!-- Side Backgrounds --&gt;
+    &lt;div class=&quot;side-bg left-side&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;side-bg right-side&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- Side Boxes --&gt;
+    &lt;div class=&quot;left-box gradient-text&quot; style=&quot;top:180px; left:20px;&quot;&gt;
+      MY TOP FRIENDS&lt;br&gt;
+      Grumpierzzz&lt;br&gt;
+      Shushafire&lt;br&gt;
+      Ratty_Sum
+    &lt;/div&gt;
+    &lt;div class=&quot;right-box gradient-text&quot; style=&quot;top:180px; right:20px;&quot;&gt;
+      FACTS&lt;br&gt;
+      I love being silly&lt;br&gt;
+      Scene-emo&lt;br&gt;
+      Love the 2000s
+    &lt;/div&gt;
+
+    &lt;!-- Center Content --&gt;
+    &lt;div class=&quot;center-content spacehey-box&quot;&gt;
+
+      &lt;div class=&quot;profile-pic&quot;&gt;
+        &lt;img src=&quot;https://yt3.ggpht.com/roBz8D5HJRVUIjVZpH2Y9s6X1sLH86p3lsc_O0w4UJzJc2hvBaOhsfRLXcgSpTIoNoYVBNij-Q=s600-c-k-c0x00ffffff-no-rj-rp-mo&quot; alt=&quot;Profile Picture&quot;&gt;
+        &lt;div class=&quot;pfp-fallback&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;h1 class=&quot;gradient-text&quot;&gt;Welcome to my site! XD&lt;/h1&gt;
+      &lt;h2 class=&quot;gradient-text&quot;&gt;scenescreamz&lt;/h2&gt;
+      &lt;p class=&quot;top-border gradient-text&quot;&gt;─── ⋆⋅ ♰ ⋅⋆ ───&lt;/p&gt;
+
+      &lt;div class=&quot;interests-socials gradient-text&quot; style=&quot;margin-bottom: 20px;&quot;&gt;
+        &lt;p&gt;🎮 Interests: Gaming (Roblox, L4D2, TF2, Fortnite, Minecraft, Osu), Music (Hyperpop, Crushcore, Rock, Alt, etc.), Filmmaking &amp; Editing 🎬&lt;/p&gt;
+        &lt;p&gt;🌐 Socials:&lt;/p&gt;
+        &lt;p&gt;Discord: scenescreamz&lt;/p&gt;
+        &lt;p&gt;Roblox: &lt;a href=&quot;https://www.roblox.com/users/2614377996/profile&quot; target=&quot;_blank&quot; class=&quot;gradient-text-link&quot;&gt;Profile&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;YouTube: &lt;a href=&quot;https://www.youtube.com/@SceneScreamz&quot; target=&quot;_blank&quot; class=&quot;gradient-text-link&quot;&gt;Channel&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;p class=&quot;gradient-text&quot; style=&quot;font-size: 1.2em;&quot;&gt;What's poppin'? O.o&lt;/p&gt;
+      &lt;p class=&quot;gradient-text&quot;&gt;☆ You've probably seen me in multiple kinds of games, MAINLY Roblox but I also try other types, like L4D2, TF2, Fortnite, Minecraft, Osu &amp; SOO MUCH more!! ☠︎&lt;/p&gt;
+      &lt;p class=&quot;gradient-text&quot;&gt;✧ Sooo, Since this website is meant for you to learn more about me as a person, I guess the BEST way to describe me is I'm a very hyper and silly individual who mainly can't control myself but hey, I see that as a charm that I have :&gt; Either way I tend to always want to spend time with friends because I love being friends with people who enjoy hanging out with me!! xP 🫀&lt;/p&gt;
+      &lt;p class=&quot;gradient-text&quot;&gt;♱ I do FILMMAKING &amp; VIDEO EDITING!! (<span lang="zh-CN">っ</span>҂<span lang="hi-IN">ཀ•</span>)<span lang="zh-CN">っ</span>&lt;/p&gt;
+      &lt;p class=&quot;gradient-text&quot;&gt;⦻ CURRENTLY, I'm taking college classes in order for me to pursue my DREAM career of being within the filming/editing industry! UNFORTUNATELY I HAVE TO DO ALL THE BORING CLASSES FIRST T^T.. BUT WHEN I DO THOSE CLASSES I plan on doing MANY things for myself and others! (≧ᗜ≦)&lt;/p&gt;
+
+      &lt;div class=&quot;discord-bio gradient-text&quot;&gt;
+        &lt;p style=&quot;font-size:2.2em; margin-bottom: 20px;&quot;&gt;─── ⋆⋅ ♰ ⋅⋆ ───&lt;/p&gt;
+        &lt;p style=&quot;font-size:2.4em; margin: 0 0 20px 0;&quot;&gt;❝scene as fuck (O<span lang="zh-CN">﹏</span>o)❞&lt;/p&gt;
+        &lt;p style=&quot;font-size:1em; margin-bottom: 20px;&quot;&gt;
+          ♫ I love ALL genres of music but mainly HYPERPOP type songs!&lt;br&gt;
+          Some artists I like are; d3r, ketseki, clover, wasty, mlv, bloodpup, barelyhuman, odetari, etc!! 🎸
+        &lt;/p&gt;
+        &lt;p style=&quot;font-size:1em; margin-bottom: 20px;&quot;&gt;
+          ✶♫✦ I LOVE playing Osu Mania and other types of rhythm games.&lt;br&gt;
+          I've been playing rhythm games for 5 years and It's PEAK! Mainly because I get to jam the FUCKK out &gt;p&lt; ✶♫✦
+        &lt;/p&gt;
+        &lt;p style=&quot;font-size:1em; margin-bottom: 30px; line-height:2em;&quot;&gt;
+          ✩ FILM &amp; HORROR MOVIE ADDICT 🩸
+        &lt;/p&gt;
+        &lt;p style=&quot;font-size:1em; margin-bottom: 30px; line-height:2em;&quot;&gt;
+          ☠︎ INFJ-T<span lang="zh-CN">彡</span>
+        &lt;/p&gt;
+        &lt;p style=&quot;font-size:1em; margin-bottom: 30px; line-height:2em;&quot;&gt;
+          20 (°<span lang="zh-CN">ロ</span>°)
+        &lt;/p&gt;
+        &lt;p style=&quot;font-size:1em; margin-bottom: 30px; line-height:2em;&quot;&gt;
+          SCENE-KING
+        &lt;/p&gt;
+        &lt;p style=&quot;font-size:2.2em; margin-top: 10px;&quot;&gt;─── ⋆⋅ ♰ ⋅⋆ ───&lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;bottom-text gradient-text&quot; style=&quot;margin-top:20px;&quot;&gt;
+        &lt;p&gt;He/Him 🕸&lt;br&gt;
+           I'm Autistic (ADHD &amp; ASD) ⛧&lt;br&gt;
+           (I have been diagnosed by a medical professional).&lt;br&gt;
+           I overthink A LOT (ᗒᗣᗕ)!&lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;p class=&quot;top-border gradient-text&quot; style=&quot;margin-top:50px;&quot;&gt;─── ⋆⋅ ♰ ⋅⋆ ───&lt;/p&gt;
+      &lt;p class=&quot;gradient-text&quot; style=&quot;text-align:center; font-size:1.2em; margin-top:20px;&quot;&gt;
+        @♱ 𝕊𝕔𝕖𝕟𝕖𝕊𝕔𝕣𝕖𝕒𝕞𝕫 ♱ has left
+      &lt;/p&gt;
+
+      &lt;div class=&quot;cd-player-window&quot; style=&quot;margin:20px auto 0 auto;&quot;&gt;
+        &lt;iframe width=&quot;320&quot; height=&quot;80&quot; src=&quot;https://www.youtube.com/embed/OjUaaKS54Lk?autoplay=1&amp;loop=1&amp;playlist=OjUaaKS54Lk&quot; title=&quot;music&quot; frameborder=&quot;0&quot; allow=&quot;autoplay&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+        &lt;p class=&quot;cd-info&quot;&gt;♫ whatsaheart &amp; Snave - &quot;vxmpire (remix)&quot; OFFICIAL VERSION&lt;/p&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;!-- Floating Stars --&gt;
+    &lt;div class=&quot;star&quot; style=&quot;left:5%; top:90%; width:2px; height:2px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;star&quot; style=&quot;left:15%; top:80%; width:3px; height:3px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;star&quot; style=&quot;left:25%; top:95%; width:2px; height:2px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;star&quot; style=&quot;left:35%; top:85%; width:4px; height:4px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;star&quot; style=&quot;left:45%; top:100%; width:3px; height:3px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;star&quot; style=&quot;left:55%; top:90%; width:2px; height:2px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;star&quot; style=&quot;left:65%; top:95%; width:3px; height:3px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;star&quot; style=&quot;left:75%; top:80%; width:2px; height:2px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;star&quot; style=&quot;left:85%; top:90%; width:3px; height:3px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;star&quot; style=&quot;left:95%; top:95%; width:2px; height:2px;&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- Floating Emoji Stickers --&gt;
+    &lt;div class=&quot;sticker-emoji&quot; style=&quot;left:10%; top:20%;&quot;&gt;💀&lt;/div&gt;
+    &lt;div class=&quot;sticker-emoji&quot; style=&quot;left:80%; top:40%;&quot;&gt;❤️&lt;/div&gt;
+    &lt;div class=&quot;sticker-emoji&quot; style=&quot;left:50%; top:10%;&quot;&gt;🦇&lt;/div&gt;
+    &lt;div class=&quot;sticker-emoji&quot; style=&quot;left:20%; top:60%;&quot;&gt;❤️&lt;/div&gt;
+    &lt;div class=&quot;sticker-emoji&quot; style=&quot;left:70%; top:70%;&quot;&gt;💀&lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
